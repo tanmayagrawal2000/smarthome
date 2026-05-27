@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+
+# SQLite (runtime database + WAL companion files)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Arduino / PlatformIO build output
+build/
+.pio/
+.pioenvs/
+*.bin
+*.elf
+*.hex
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code local-only settings
+.claude/settings.local.json
+
+# Logs
+*.log

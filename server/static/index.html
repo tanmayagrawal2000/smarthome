@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Grid Monitor</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="app" data-status="unknown">
+      <header class="app__header">
+        <h1>Grid Monitor</h1>
+        <span class="conn" id="conn" aria-live="polite">connecting…</span>
+      </header>
+
+      <section class="hero" aria-labelledby="status-label">
+        <div class="hero__dot" aria-hidden="true"></div>
+        <div class="hero__text">
+          <p id="status-label" class="hero__label">Grid is</p>
+          <p class="hero__status" id="status">…</p>
+          <p class="hero__since">
+            for <span class="hero__duration" id="duration">--:--:--</span>
+          </p>
+          <p class="hero__sub" id="since-line">since —</p>
+        </div>
+      </section>
+
+      <section class="stats" aria-labelledby="today-label">
+        <h2 id="today-label" class="stats__title">Today</h2>
+        <div class="stats__grid">
+          <div class="stat">
+            <p class="stat__label">Uptime</p>
+            <p class="stat__value" id="stat-uptime-pct">—</p>
+            <p class="stat__sub" id="stat-uptime-time">—</p>
+          </div>
+          <div class="stat">
+            <p class="stat__label">Downtime</p>
+            <p class="stat__value" id="stat-downtime">—</p>
+            <p class="stat__sub" id="stat-outage-count">— outages</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="outages" aria-labelledby="outages-label">
+        <h2 id="outages-label" class="outages__title">Today's outages</h2>
+        <ul class="outages__list" id="outage-list">
+          <li class="outages__empty">No outages today 🎉</li>
+        </ul>
+      </section>
+
+      <footer class="app__footer">
+        <span id="last-heartbeat">last ping —</span>
+      </footer>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
