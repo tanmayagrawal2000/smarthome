@@ -13,7 +13,7 @@
 const char* WIFI_SSID     = "YOUR_WIFI_SSID";
 const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
 // Use the server's LAN IP or hostname. Port must match uvicorn.
-const char* SERVER_URL    = "http://192.168.1.100:8000/api/heartbeat";
+const char* SERVER_URL    = "http://192.168.1.100:8000/api/grid/heartbeat";
 // ====================================
 
 const uint32_t HEARTBEAT_INTERVAL_MS = 5000;

@@ -28,16 +28,20 @@
 
       <section class="stats" aria-labelledby="today-label">
         <h2 id="today-label" class="stats__title">Today</h2>
+
+        <div class="timeline" aria-label="Status timeline for today">
+          <div class="timeline__bar" id="timeline-bar"></div>
+          <div class="timeline__axis" id="timeline-axis"></div>
+        </div>
+
         <div class="stats__grid">
-          <div class="stat">
-            <p class="stat__label">Uptime</p>
-            <p class="stat__value" id="stat-uptime-pct">—</p>
-            <p class="stat__sub" id="stat-uptime-time">—</p>
-          </div>
           <div class="stat">
             <p class="stat__label">Downtime</p>
             <p class="stat__value" id="stat-downtime">—</p>
-            <p class="stat__sub" id="stat-outage-count">— outages</p>
+          </div>
+          <div class="stat">
+            <p class="stat__label">Outages</p>
+            <p class="stat__value" id="stat-outage-count">—</p>
           </div>
         </div>
       </section>
@@ -48,6 +52,52 @@
           <li class="outages__empty">No outages today 🎉</li>
         </ul>
       </section>
+
+      <details class="history" id="history-details">
+        <summary class="history__summary">
+          <h2 class="history__title">History</h2>
+          <span class="history__chevron" aria-hidden="true">›</span>
+        </summary>
+
+        <div class="history__body">
+          <div class="history__controls">
+            <div class="history__tabs" role="tablist">
+              <button type="button" class="history__tab is-active" data-range="day" role="tab">Day</button>
+              <button type="button" class="history__tab" data-range="week" role="tab">Week</button>
+              <button type="button" class="history__tab" data-range="month" role="tab">Month</button>
+            </div>
+            <input type="date" id="history-date" class="history__date" />
+          </div>
+
+          <p class="history__range-label" id="history-range-label">—</p>
+
+          <div class="timeline">
+            <div class="timeline__bar" id="history-timeline-bar"></div>
+            <div class="timeline__axis" id="history-timeline-axis"></div>
+          </div>
+
+          <div class="history__stats">
+            <div class="stat">
+              <p class="stat__label">Uptime</p>
+              <p class="stat__value" id="history-uptime-pct">—</p>
+              <p class="stat__sub" id="history-uptime-time">—</p>
+            </div>
+            <div class="stat">
+              <p class="stat__label">Downtime</p>
+              <p class="stat__value" id="history-downtime">—</p>
+            </div>
+            <div class="stat">
+              <p class="stat__label">Outages</p>
+              <p class="stat__value" id="history-outages">—</p>
+            </div>
+            <div class="stat">
+              <p class="stat__label">Longest outage</p>
+              <p class="stat__value" id="history-longest">—</p>
+              <p class="stat__sub" id="history-avg">avg —</p>
+            </div>
+          </div>
+        </div>
+      </details>
 
       <footer class="app__footer">
         <span id="last-heartbeat">last ping —</span>
